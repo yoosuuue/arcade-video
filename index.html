@@ -24,6 +24,29 @@
             /* 사용자가 영상 위에서 조작할 수 없게 하여 UI가 뜨는 것을 막음 */
             pointer-events: none; 
         }
+        /* 1. 스크롤바를 위한 추가 코드 */
+    html, body {
+        overflow: hidden; /* 스크롤바가 생기는 것을 막습니다. */
+    }
+
+    /* (기존 코드 유지) 검은 배경 및 중앙 정렬 설정 */
+    body {
+        background-color: #000000;
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+        min-height: 100vh;
+        margin: 0;
+        padding: 0; /* padding이 스크롤바를 만들 수 있으므로 0으로 변경합니다. */
+    }
+    
+    /* <video> 태그 스타일: 화면 너비에 맞춰 크기 설정 및 UI 숨김 */
+    video {
+        width: 80vw;
+        max-width: 960px; 
+        height: auto;
+        pointer-events: none; 
+    }
     </style>
 </head>
 <body>
